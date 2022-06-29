@@ -1,0 +1,243 @@
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git
+$ git init
+Initialized empty Git repository in C:/Git/.git/
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git config --global user.name "Ananth"
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git config --global user.email "ananthap99@gmail.com"
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ touch index.html
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git add .
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git add .
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git commit -m "Index file Created"
+[master (root-commit) a79f3dc] Index file Created
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.html
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git log
+commit a79f3dcad3221d305183432acaa1df0a8a113736 (HEAD -> master)
+Author: Ananth <ananthap99@gmail.com>
+Date:   Wed Jun 29 21:54:52 2022 +0530
+
+    Index file Created
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git remote add origin https://github.com/Ananth-cyber/Python.git
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (master)
+$ git branch -M main
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 261 bytes | 261.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ananth-cyber/Python.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 677 bytes | 61.00 KiB/s, done.
+From https://github.com/Ananth-cyber/Python
+ * branch            main       -> FETCH_HEAD
+   a79f3dc..f9b7c5b  main       -> origin/main
+Updating a79f3dc..f9b7c5b
+Fast-forward
+ index.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git checkout -b python
+Switched to a new branch 'python'
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ touch index2.html
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ touch checkout python
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git checkout python
+Switched to branch 'python'
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ code .
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git status
+On branch python
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        checkout
+        index2.html
+        python
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git add .
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git commit
+hint: Waiting for your editor to close the file...       0 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                                                                     909143 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+       1387180 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                        1910768 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                                         2428316 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                                                          2480990 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                                                                           2527218 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+              2571403 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                               2733441 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+                                                3748093 [sig] bash 1184! sigpacket::process: Suppressing signal 18 to win32 process (pid 79736)
+Aborting commit due to empty commit message.
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git commit -m "Newly Created"
+[python 91a3e84] Newly Created
+ 4 files changed, 4 insertions(+)
+ create mode 100644 checkout
+ create mode 100644 index2.html
+ create mode 100644 python
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git checkout python
+Switched to branch 'python'
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git push origin python
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 433 bytes | 433.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'python' on GitHub by visiting:
+remote:      https://github.com/Ananth-cyber/Python/pull/new/python
+remote:
+To https://github.com/Ananth-cyber/Python.git
+ * [new branch]      python -> python
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (python)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git merge python
+Updating f9b7c5b..91a3e84
+Fast-forward
+ checkout    | 0
+ index.html  | 1 +
+ index2.html | 3 +++
+ python      | 0
+ 4 files changed, 4 insertions(+)
+ create mode 100644 checkout
+ create mode 100644 index2.html
+ create mode 100644 python
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git add .
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git commit -m "Merged"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ananth-cyber/Python.git
+   f9b7c5b..91a3e84  main -> main
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$ ^C
+
+anant@LAPTOP-KTU5HUDM MINGW64 /c/Git (main)
+$
